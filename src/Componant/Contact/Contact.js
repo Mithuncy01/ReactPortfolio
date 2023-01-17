@@ -98,13 +98,13 @@ export const Contact = () => {
             </div>
           </div>
             <h1 className="text-white lg:text-[30px] sm:text-[20px] sm:px-6 text-center font-bold mb-10">Contact Me / Tell Me About Yourself</h1>
-            <form action='' onSubmit={handleSubmit} className=" flex flex-col lg:w-[800px] sm:w-[300px] md:w-[500px] sm:gap-5 gap-8">
+            <form action='' onSubmit={handleSubmit} className=" flex flex-col lg:w-[800px] sm:w-[320px] md:w-[500px] sm:gap-5 gap-8">
                 <input className="focus:outline-purple ring-1 ring-mycolor2 text-white py-3 px-6 bg-DarkBlue border-none rounded-sm" type='text'ref={inputElement} value={name} onChange={handleName}  required placeholder='Type Your Name'></input>
-                <input  className= "focus:outline-purple ring-1 ring-mycolor2 text-white py-3 px-6 bg-DarkBlue border-none rounded-sm" onChange={handleChange} value={email} name='email' placeholder="Type Your Email">
+                <input  className= "focus:outline-purple ring-1 ring-mycolor2 text-white py-3 px-6 bg-DarkBlue border-none rounded-sm" onChange={handleChange} value={email} name='email' required placeholder="Type Your Email">
                   
                 </input>
                 <textarea className="focus:outline-purple ring-1 ring-mycolor2 text-white h-40 py-3 px-6 bg-DarkBlue border-none rounded-sm" type='text' value={text} onChange={handleText} placeholder="Description"></textarea>
-                <input className="py-3 px-2 bg-purple text-white text-lg font-medium rounded-sm ring-1 ring-mycolor2 cursor-pointer"  type='submit'></input>
+                <input className="py-3 px-2 bg-purple hover:bg-mycolor2 hover:text-DarkBlue text-white text-lg font-medium rounded-sm ring-1 ring-mycolor2 cursor-pointer"  type='submit'></input>
             </form>
             <div className="h-[85px] text-center gap-2 mt-4 w-ful flex flex-col p-4">
               {<h1 className="text-red ">{emailErr}</h1>}
