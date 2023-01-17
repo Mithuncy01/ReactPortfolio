@@ -17,7 +17,7 @@ export const ToggleButton = () => {
 
               // {`open?<div>you content to be hide and shown</div>:null`}
   return (
-        <div className="">
+        <div className=" lg:hidden">
           <div onClick={ ()=> setMobileMenuOpen(!mobileMenuOpen)}>
             
           {mobileMenuOpen? (<AiFillCloseCircle className="z-99 lg:hidden md:block sm:block w-8 h-8 z-30 ml-8 mt-8 fixed text-white text-[30px] cursor-pointer hover:text-mycolor2"

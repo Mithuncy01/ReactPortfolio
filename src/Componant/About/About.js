@@ -8,7 +8,7 @@ export const About = () => {
     <div className="lg:h-screen md:h-screen lg:ml-[200px] md:ml-0 sm:ml-0 bg-midnight font-[poppins]">
         <ToggleButton className=""></ToggleButton>
         <div style={{backgroundImage: `url(${mainBg})`, backgroundRepeat:`no-repeat`, objectFit: 'cover',}} 
-         className="w-full lg:h-screen md:h-screen relative text-center flex flex-col overflow-hidden items-center justify-center gap-2">
+         className="w-full lg:h-screen md:h-full relative text-center flex flex-col overflow-hidden items-center justify-center gap-2">
           
           <h1 className="lg:text-[35px] sm:mt-24 md:mt-24 sm:text-[30px] sm:my-6 text-white font-bold ">My Expertise</h1>
           <span className="bg-purple h-[3px] w-[100px] mb-10"></span>
