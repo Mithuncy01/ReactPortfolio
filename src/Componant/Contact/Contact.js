@@ -5,8 +5,6 @@ import './Contact.css';
 import { ToggleButton } from '../ToggleButton/ToggleButton';
 
 
-
-
 export const Contact = () => {
   const [ email , setEmail] = useState("");
   const [ name, setName] = useState("");
@@ -16,7 +14,6 @@ export const Contact = () => {
   const [ textErr, setTextErr] = useState("");
  
 
- 
   const inputElement = useRef(null);
   useEffect(()=>{
     if(inputElement.current){

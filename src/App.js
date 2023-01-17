@@ -7,6 +7,7 @@ import {About } from './Componant/About/About';
 import { Contact} from './Componant/Contact/Contact';
 import { Portfolio } from './Componant/Portfolio/Portfolio';
 import { View } from './Componant/View/View';
+import { WordpressSite } from './Componant/WordpressSite/WordpressSite';
 
 
 
@@ -22,6 +23,7 @@ export default function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/portfolio' element={<Portfolio/>}></Route>
         <Route path='/portfolio/view' element={<View/>}></Route>
+        <Route path='/portfolio/wordpress' element={<WordpressSite/>}></Route>
       </Routes>
     </>
   )
