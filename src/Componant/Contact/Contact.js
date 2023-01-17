@@ -5,6 +5,8 @@ import './Contact.css';
 import { ToggleButton } from '../ToggleButton/ToggleButton';
 
 
+
+
 export const Contact = () => {
   const [ email , setEmail] = useState("");
   const [ name, setName] = useState("");
@@ -12,7 +14,7 @@ export const Contact = () => {
   const [ fromErr, setFromErr] = useState(null);
   const [ text, setText] = useState("");
   const [ textErr, setTextErr] = useState("");
-  const [time, setTime] = useState(0);
+ 
 
  
   const inputElement = useRef(null);
@@ -25,22 +27,23 @@ export const Contact = () => {
   // From Control function
   const handleSubmit = (e)=>{
     e.preventDefault();
-    setName("") 
-    setEmail("")
     setEmailErr(null)
-    setText("")
     const regExEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const value = e.target.email.value;
     console.log(value)
-    if(regExEmail.test(value)){
-      setFromErr('Success')
-    }else{
-      setFromErr('Something Error')
+    if(regExEmail.test(value) && text !== "" && text.length > 10){
+      setFromErr('I will contact with you soon')
+      setName("") 
       setEmail("")
+      setText("")
+    }else{
+      setFromErr('Something wrong(Not Submitted)')
+      
+      setText("error here");
     }
   }
 
-  // Email Contron
+  // Email Control
   const handleChange = (e)=>{
     const regExEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const value = e.target.value;
@@ -53,7 +56,7 @@ export const Contact = () => {
     setEmail(value)
   }
 
-  // Name Contron
+  // Name Control
   const handleName = (e)=>{
     const value = e.target.value;
     setName(value)
@@ -104,7 +107,7 @@ export const Contact = () => {
                   
                 </input>
                 <textarea className="focus:outline-purple ring-1 ring-mycolor2 text-white h-40 py-3 px-6 bg-DarkBlue border-none rounded-sm" type='text' value={text} onChange={handleText} placeholder="Description"></textarea>
-                <input className="py-3 px-2 bg-purple hover:bg-mycolor2 hover:text-DarkBlue text-white text-lg font-medium rounded-sm ring-1 ring-mycolor2 cursor-pointer"  type='submit'></input>
+                <input className="py-3 px-2 bg-purple hover:bg-mycolor2 hover:text-DarkBlue text-white text-lg font-medium rounded-sm ring-1 ring-mycolor2 cursor-pointer"type='submit'></input>
             </form>
             <div className="h-[85px] text-center gap-2 mt-4 w-ful flex flex-col p-4">
               {<h1 className="text-red ">{emailErr}</h1>}
